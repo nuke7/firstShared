@@ -1,14 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Shared</title>
+    <style>
+      html {
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+        box-sizing: border-box;
+        margin: 0;
+      }
+      h1 {
+        color: darkred;
+        text-align: center;
+        margin: auto;
+      }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First Shared Document</title>
-</head>
+      section {
+        margin-top: 1.5rem;
+        border: 3px solid darkred;
+        width: 75vw;
+        max-width: 850px;
+        margin: auto;
+        margin-top: 1.5rem;
+      }
 
-<body>
+      article {
+        margin: 0.5em;
+        margin-top: 1em;
+        margin-bottom: 2em;
+      }
 
-</body>
+      table {
+        max-width: 75%;
+      }
 
+      table,
+      th,
+      td {
+        border: 3px solid darkred;
+        border-collapse: collapse;
+        text-align: center;
+      }
+
+      td {
+        padding: 0.5em;
+      }
+
+      #results {
+        margin: auto;
+        margin-bottom: 1em;
+      }
+
+      #comic-sans {
+        margin: auto;
+        display: block;
+        margin-bottom: 1.5em;
+        max-width: 75%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Miért használják az emberek még mindig a Comic Sans-t?!</h1>
+    </header>
+
+    <section>
+      <article>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati aut,
+        praesentium dignissimos id numquam ea voluptas cum modi dolorum exercitationem
+        enim animi veritatis nostrum ut quae natus esse distinctio accusantium! Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta possimus est
+        vitae aliquam maxime non. Omnis optio hic, placeat eaque, repellat nostrum unde,
+        tenetur quia numquam voluptas dignissimos praesentium.
+      </article>
+      <table id="results">
+        <tr>
+          <th>Indok</th>
+          <th>Megkérdezettek hány százaléka</th>
+        </tr>
+        <tr>
+          <td>Mert cuki</td>
+          <td>30%</td>
+        </tr>
+        <tr>
+          <td>Mert bohókás</td>
+          <td>30%</td>
+        </tr>
+        <tr>
+          <td>Mert COOL</td>
+          <td>40%</td>
+        </tr>
+      </table>
+
+      <img
+        id="comic-sans"
+        src="https://www.rd.com/wp-content/uploads/2017/10/01-If-You-Hate-the-Font-Comic-Sans-Here%E2%80%99s-the-Man-to-Blame-760x506.jpg"
+        alt="comic sans picture"
+      />
+    </section>
+  </body>
 </html>
