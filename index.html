@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>First Shared</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Miért használják az emberek még mindig a Comic Sans-t?!</h1>
+    </header>
+
+    <section>
+      <article>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati aut,
+        praesentium dignissimos id numquam ea voluptas cum modi dolorum exercitationem
+        enim animi veritatis nostrum ut quae natus esse distinctio accusantium! Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta possimus est
+        vitae aliquam maxime non. Omnis optio hic, placeat eaque, repellat nostrum unde,
+        tenetur quia numquam voluptas dignissimos praesentium.
+      </article>
+      <table id="results">
+        <tr>
+          <th>Indok</th>
+          <th>Megkérdezettek hány százaléka</th>
+        </tr>
+        <tr>
+          <td>Mert cuki</td>
+          <td>30%</td>
+        </tr>
+        <tr>
+          <td>Mert bohókás</td>
+          <td>30%</td>
+        </tr>
+        <tr>
+          <td>Mert COOL</td>
+          <td>40%</td>
+        </tr>
+      </table>
+
+      <img
+        id="comic-sans"
+        src="https://www.rd.com/wp-content/uploads/2017/10/01-If-You-Hate-the-Font-Comic-Sans-Here%E2%80%99s-the-Man-to-Blame-760x506.jpg"
+        alt="comic sans picture"
+      />
+    </section>
+
+    <section id="form">
+      <fieldset id="name-pw">
+        <legend>Első kérdés</legend>
+        <label for="name">User name: </label>
+        <input type="text" id="name" name="name" placeholder="felhasználónév" />
+        <label for="pw">Password: </label>
+        <input type="password" id="pw" name="pw" placeholder="jelszó" />
+      </fieldset>
+      <fieldset id="kor-input">
+        <legend>Második kérdés</legend>
+        <label for="kor">Életkor: </label>
+        <input type="number" name="kor" id="kor" min="18" />
+      </fieldset>
+      <div class="reszletek">
+        <fieldset>
+          <legend>Végzettség</legend>
+          <div class="vegzettseg">
+            <label for="altalanos">
+              <input type="checkbox" id="altalanos" name="altalanos" /> Általános Iskola
+            </label>
+            <label for="kozepes">
+              <input type="checkbox" id="kozepes" name="kozepes" /> Érettségi
+            </label>
+            <label for="felso">
+              <input type="checkbox" id="felso" name="felso" /> Egyetem
+            </label>
+            <label for="okj"> <input type="checkbox" id="okj" name="okj" /> OKJ </label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Részleg</legend>
+          <div class="reszlegek">
+            <label for="hr"> <input type="radio" id="hr" name="reszleg" /> HR </label>
+            <label for="finance">
+              <input type="radio" id="finance" name="reszleg" /> Finance
+            </label>
+            <label for="dev">
+              <input type="radio" id="dev" name="reszleg" /> Development
+            </label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="exp">
+        <label for="tapasztalat">Tapasztalat: </label>
+        <select id="tapasztalat" name="tapasztalat">
+          <option value="kezdo">Pályakezdő</option>
+          <option value="junior">1-2 év</option>
+          <option value="medior">2-4 év</option>
+          <option value="senior">4+ év</option>
+        </select>
+        <input type="submit" value="Küldés" />
+      </div>
+    </section>
+  </body>
+</html>
