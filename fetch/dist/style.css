@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 400px;
+  font-family: "Roboto", sans-serif;
+  background-color: #009c9c;
+}
+
+.button {
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-align: center;
+  cursor: pointer;
+}
+.button:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #08a84e;
+  border-radius: 10rem;
+  z-index: -2;
+}
+.button:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #055f2c;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+.button:hover {
+  color: #fff;
+}
+.button:hover:before {
+  width: 100%;
+}
+.button:active {
+  color: #0854a8;
+}
+
+.container {
+  width: 100%;
+}
+.container .search {
+  width: 20%;
+  margin: 2em auto;
+}
+.container .search input {
+  display: block;
+  width: 100%;
+  border-radius: 2em;
+  margin-bottom: 1em;
+  height: 2em;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  width: 75%;
+  max-width: 1600px;
+}
+.results div {
+  margin: 1rem 1rem;
+  width: 20%;
+  min-width: 200px;
+}
+.results .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 1em;
+}
+.results .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.results .card img {
+  width: 100%;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+.results .card .text {
+  width: 100%;
+}
+.results .card .text .imdb {
+  width: 50%;
+  transform: translateX(-10%);
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+.results .card h3,
+.results .card h5 {
+  padding: 5px 10px;
+  width: 85%;
+  text-align: center;
+  color: whitesmoke;
+}
