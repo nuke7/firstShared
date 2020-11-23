@@ -29,27 +29,9 @@ body {
   grid-area: negy;
 }
 
-.egyes:hover {
-  background-color: brown;
-  min-width: 100px;
-  min-height: 100px;
-  width: 50vw;
-  height: 50vh;
-}
-.kettes:hover {
-  background-color: brown;
-  min-width: 100px;
-  min-height: 100px;
-  width: 50vw;
-  height: 50vh;
-}
-.harmas:hover {
-  background-color: brown;
-  min-width: 100px;
-  min-height: 100px;
-  width: 50vw;
-  height: 50vh;
-}
+.egyes:hover,
+.kettes:hover,
+.harmas:hover,
 .negyes:hover {
   background-color: brown;
   min-width: 100px;

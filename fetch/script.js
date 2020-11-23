@@ -1,6 +1,6 @@
 const search = async (quaryString) => {
   let response = await fetch(
-    `http://api.tvmaze.com/search/shows?q=${quaryString} `
+    `https://api.tvmaze.com/search/shows?q=${quaryString} `
   ).then((response) => response.json());
 
   console.log(response);
@@ -16,7 +16,7 @@ const createMoveiTile = (show) => {
             <h5>${show.rating.average !== null ? show.rating.average : "Nincs adat"}</h5>
             <a href="${
               show.url
-            }" target="_blank"><img class="imdb" src="http://icons.iconarchive.com/icons/uiconstock/socialmedia/512/IMDb-icon.png" alt=""></a>
+            }" target="_blank"><img class="imdb" src="https://icons.iconarchive.com/icons/uiconstock/socialmedia/512/IMDb-icon.png" alt=""></a>
         </div>
     </div>`;
 };
