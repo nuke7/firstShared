@@ -56,6 +56,11 @@ body {
 .button:active {
   color: #0854a8;
 }
+@media (max-width: 550px) {
+  .button {
+    font-size: 0.7em;
+  }
+}
 
 .container {
   width: 100%;
@@ -70,6 +75,7 @@ body {
   border-radius: 2em;
   margin-bottom: 1em;
   height: 2em;
+  padding: 0.5rem;
 }
 
 .results {

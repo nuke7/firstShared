@@ -10,10 +10,18 @@ const search = async (quaryString) => {
 const createMoveiTile = (show) => {
   return `
     <div class="card">
-        <img src=${show.image !== null ? show.image.medium : "#"}>
+        <img src=${
+          show.image !== null
+            ? show.image.medium
+            : "https://www.teqport.com/images/employees/lower_res/Placeholder_no_text.svg.png"
+        }>
         <div class="text">
             <h3>${show.name}</h3>
-            <h5>${show.rating.average !== null ? show.rating.average : "Nincs adat"}</h5>
+            <h5>${
+              show.rating.average !== null
+                ? `Average rating: ${show.rating.average}`
+                : "No average rating"
+            }</h5>
             <a href="${
               show.url
             }" target="_blank"><img class="imdb" src="https://icons.iconarchive.com/icons/uiconstock/socialmedia/512/IMDb-icon.png" alt=""></a>

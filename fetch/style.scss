@@ -4,6 +4,8 @@ $green: #08a84e;
 $light-blue: #0986b3;
 $blue: #0854a8;
 
+$breakpoint: 550px;
+
 * {
   margin: 0;
   padding: 0;
@@ -29,6 +31,7 @@ body {
   z-index: 1;
   text-align: center;
   cursor: pointer;
+
   &:after {
     content: "";
     position: absolute;
@@ -40,6 +43,7 @@ body {
     border-radius: 10rem;
     z-index: -2;
   }
+
   &:before {
     content: "";
     position: absolute;
@@ -52,14 +56,20 @@ body {
     border-radius: 10rem;
     z-index: -1;
   }
+
   &:hover {
     color: #fff;
     &:before {
       width: 100%;
     }
   }
+
   &:active {
     color: $blue;
+  }
+
+  @media (max-width: $breakpoint) {
+    font-size: 0.7em;
   }
 }
 
@@ -76,6 +86,7 @@ body {
       border-radius: 2em;
       margin-bottom: 1em;
       height: 2em;
+      padding: 0.5rem;
     }
   }
 }
