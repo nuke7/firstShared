@@ -1,6 +1,6 @@
-const search = async (quaryString) => {
+const search = async (queryString) => {
   let response = await fetch(
-    `https://api.tvmaze.com/search/shows?q=${quaryString} `
+    `https://api.tvmaze.com/search/shows?q=${queryString} `
   ).then((response) => response.json());
 
   console.log(response);
