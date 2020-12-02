@@ -35,8 +35,25 @@
   font-size: 1.3rem;
 }
 
+.gif {
+  height: 150px;
+  width: 150px;
+  margin: auto;
+  background-color: black;
+
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.gif:hover {
+  background-image: url("https://cdn.discordapp.com/attachments/752152018893668532/771121390979907644/noi_portre_gif.gif");
+  background-position: center;
+  background-size: contain;
+  opacity: 1;
+}
+
 main {
-  background-color: rgb(58, 51, 53);
+  background-color: rgb(0, 0, 0);
   width: 81%;
   margin: auto;
   height: 100vh;
@@ -85,6 +102,7 @@ a:hover {
 a:active {
   transition: color 0.3s;
   color: #007be6;
+  background-color: #4e4132;
 }
 
 section {
