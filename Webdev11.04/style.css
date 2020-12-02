@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+body {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "egy ket"
+    "ha negy";
+}
+
+.egyes {
+  grid-area: egy;
+}
+
+.kettes {
+  grid-area: ket;
+}
+
+.harmas {
+  grid-area: ha;
+}
+
+.negyes {
+  grid-area: negy;
+}
+
+.egyes:hover,
+.kettes:hover,
+.harmas:hover,
+.negyes:hover {
+  background-color: brown;
+  min-width: 100px;
+  min-height: 100px;
+  width: 50vw;
+  height: 50vh;
+}
