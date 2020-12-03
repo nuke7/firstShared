@@ -1,4 +1,4 @@
-window.onload = function () {
+window.addEventListener("load", function () {
   const name = document.querySelector("#name");
   const race = document.querySelector("#race");
   const gender = document.querySelector("#gender");
@@ -131,9 +131,9 @@ window.onload = function () {
       ) {
         if (object.hasOwnProperty(k)) {
           string += `
-        The ${k}. character's name is ${object[k].name}
-        They are a ${object[k].gender} ${object[k].race},
-        Who trained as a ${object[k].class}
+        The ${parseInt(k) + 1}. character's name is ${object[k].name},
+        who is a(n) ${object[k].race} ${object[k].gender},
+        and trained as a ${object[k].class}
         \n`;
         }
       }
@@ -144,20 +144,20 @@ window.onload = function () {
   }
 
   exportBtn.addEventListener("click", function () {
-    console.log(characters);
+    /* console.log(characters); */
     /*console.log(characters[0].name); */
     alert("Check the Console!4!!4!");
 
     objToString(characters);
 
     for (let i = 0; i < characters.length - 1; i++) {
-      console.log(`The ${i + 1}. character's name is ${characters[i].name}. 
-      They are a ${characters[i].race} ${characters[i].gender} - 
-      and they trained as a ${characters[i].class}.`);
+      console.log(`The ${i + 1}. character's name is ${characters[i].name}, 
+      who is a(n) ${characters[i].race} ${characters[i].gender} - 
+      and trained as a ${characters[i].class}.`);
     }
 
     let link = document.getElementById("downloadlink");
     link.href = makeTextFile(objToString(characters));
     link.style.display = "block";
   });
-};
+});
