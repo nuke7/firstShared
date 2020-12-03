@@ -40,7 +40,11 @@ window.onload = function () {
       name.value.includes("!") ||
       name.value.includes("*") ||
       name.value.includes("$") ||
-      name.value.includes("=")
+      name.value.includes("=") ||
+      name.value.includes("?") ||
+      name.value.includes(":") ||
+      name.value.includes(";") ||
+      name.value.includes(",")
     ) {
       alert("not valid characters in name");
     } else {
@@ -99,6 +103,10 @@ window.onload = function () {
       name.value.includes("*") ||
       name.value.includes("$") ||
       name.value.includes("=") ||
+      name.value.includes("?") ||
+      name.value.includes(":") ||
+      name.value.includes(";") ||
+      name.value.includes(",") ||
       gender.value === "Select One" ||
       race.value === "Select One" ||
       caste.value === "Select One"
