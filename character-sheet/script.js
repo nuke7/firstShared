@@ -152,29 +152,30 @@ window.onload = function () {
       ) {
         if (object.hasOwnProperty(k)) {
           string += `
-        The ${k}. character's name is ${object[k].name}
-        They are a ${object[k].gender} ${object[k].race},
-        Who trained as a ${object[k].class}
+        The ${parseInt(k) + 1}. character's name is ${object[k].name}.
+        ${object[k].gender == "Male" ? "He" : "She"} is a(n) ${object[k].gender} ${
+            object[k].race
+          },
+        Who trained as a ${object[k].class}. 
         \n`;
         }
       }
     }
 
-    /* console.log(string); */
     return string;
   }
 
   exportBtn.addEventListener("click", function () {
-    console.log(characters);
-    /*console.log(characters[0].name); */
     alert("Check the Console!4!!4!");
 
     objToString(characters);
 
     for (let i = 0; i < characters.length - 1; i++) {
       console.log(`The ${i + 1}. character's name is ${characters[i].name}. 
-      They are a ${characters[i].race} ${characters[i].gender} - 
-      and they trained as a ${characters[i].class}.`);
+      ${characters[i].gender == "Male" ? "He" : "She"} is a(n) ${characters[i].race} ${
+        characters[i].gender
+      } - 
+      and is trained as a ${characters[i].class}.`);
     }
 
     let link = document.getElementById("downloadlink");
