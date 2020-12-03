@@ -31,7 +31,16 @@ window.onload = function () {
       name.value.includes("(") ||
       name.value.includes("{") ||
       name.value.includes("'") ||
-      name.value.includes("`")
+      name.value.includes("`") ||
+      name.value.includes('"') ||
+      name.value.includes("-") ||
+      name.value.includes("+") ||
+      name.value.includes("/") ||
+      name.value.includes("%") ||
+      name.value.includes("!") ||
+      name.value.includes("*") ||
+      name.value.includes("$") ||
+      name.value.includes("=")
     ) {
       alert("not valid characters in name");
     } else {
