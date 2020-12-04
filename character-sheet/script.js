@@ -10,6 +10,7 @@ window.onload = function () {
   const newCharBtn = document.querySelector("#newChar");
   const charTable = document.querySelector("#charTable");
   const exportBtn = document.querySelector("#export");
+  let validChar = true;
   let characters = [{}];
   function makeTextFile(text) {
     let textFile;
@@ -47,6 +48,7 @@ window.onload = function () {
       name.value.includes(",")
     ) {
       alert("not valid characters in name");
+      validChar = false;
     } else {
       charName.innerHTML = name.value;
     }
@@ -87,26 +89,7 @@ window.onload = function () {
   newCharBtn.addEventListener("click", function () {
     if (
       !name.value ||
-      name.value.includes("<") ||
-      name.value.includes("#") ||
-      name.value.includes("@") ||
-      name.value.includes("(") ||
-      name.value.includes("{") ||
-      name.value.includes("'") ||
-      name.value.includes("`") ||
-      name.value.includes('"') ||
-      name.value.includes("-") ||
-      name.value.includes("+") ||
-      name.value.includes("/") ||
-      name.value.includes("%") ||
-      name.value.includes("!") ||
-      name.value.includes("*") ||
-      name.value.includes("$") ||
-      name.value.includes("=") ||
-      name.value.includes("?") ||
-      name.value.includes(":") ||
-      name.value.includes(";") ||
-      name.value.includes(",") ||
+      validChar === false ||
       gender.value === "Select One" ||
       race.value === "Select One" ||
       caste.value === "Select One"
