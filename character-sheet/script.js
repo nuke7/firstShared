@@ -70,8 +70,6 @@ window.onload = function () {
 
   newCharBtn.addEventListener("click", function () {
     if (
-      !name.value ||
-      validChar === false ||
       gender.value === "Select One" ||
       race.value === "Select One" ||
       caste.value === "Select One"
