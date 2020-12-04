@@ -11,6 +11,9 @@ window.onload = function () {
   const charTable = document.querySelector("#charTable");
   const exportBtn = document.querySelector("#export");
   let validChar = true;
+  let RegEx = /^[a-z0-9]+$/i;
+  // let ValidRegEx = RegEx.test(name.value);
+
   let characters = [{}];
   function makeTextFile(text) {
     let textFile;
@@ -25,28 +28,7 @@ window.onload = function () {
   }
 
   name.addEventListener("blur", function () {
-    if (
-      name.value.includes("<") ||
-      name.value.includes("#") ||
-      name.value.includes("@") ||
-      name.value.includes("(") ||
-      name.value.includes("{") ||
-      name.value.includes("'") ||
-      name.value.includes("`") ||
-      name.value.includes('"') ||
-      name.value.includes("-") ||
-      name.value.includes("+") ||
-      name.value.includes("/") ||
-      name.value.includes("%") ||
-      name.value.includes("!") ||
-      name.value.includes("*") ||
-      name.value.includes("$") ||
-      name.value.includes("=") ||
-      name.value.includes("?") ||
-      name.value.includes(":") ||
-      name.value.includes(";") ||
-      name.value.includes(",")
-    ) {
+    if (RegEx.test(name.value) === false) {
       alert("not valid characters in name");
       validChar = false;
     } else {
