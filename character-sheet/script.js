@@ -11,7 +11,7 @@ window.onload = function () {
   const charTable = document.querySelector("#charTable");
   const exportBtn = document.querySelector("#export");
   let validChar = true;
-  let RegEx = /^[a-z0-9]+$/i;
+  let RegEx = /^[a-z0-9Á-ű]+$/i;
   // let ValidRegEx = RegEx.test(name.value);
 
   let characters = [{}];
