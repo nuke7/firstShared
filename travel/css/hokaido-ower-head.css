@@ -1,0 +1,283 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+header {
+  position: relative;
+}
+
+header .image.header {
+  z-index: -1;
+}
+
+header > * {
+  position: absolute;
+}
+
+h1,
+.content-1.text :first-child span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
+.content-1.text :first-child span {
+  float: left;
+  margin: 0.25em 0.1em 0;
+  font-size: 4em;
+  color: red;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: xx-large;
+  color: red;
+  margin-top: 2em;
+}
+
+img {
+  height: auto;
+}
+
+.image img {
+  width: 100%;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  gap: 0;
+  grid-auto-rows: auto;
+  border: 0.5em solid #d6d6d6;
+  color: #4b4b54;
+}
+
+.page > * {
+  grid-column: col-start / span 12;
+}
+
+.head {
+  grid-row: 1 / span 5;
+  background-image: url("../img/mountains.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+  overflow-y: visible;
+}
+
+.head svg defs #grad2,
+.head svg defs #grad3,
+.head svg defs #grad4 {
+  display: none;
+}
+
+.logo {
+  grid-row: 2 / span 1;
+  grid-column: 5 / span 4;
+  margin: 8vw  3.5vw 3.5vw 3.5vw;
+}
+
+nav {
+  position: fixed;
+  z-index: 2;
+  top: 30px;
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+  width: 97.8vw;
+}
+
+nav img[alt="bts-logo"] {
+  margin-left: 30px;
+  width: 90px;
+}
+
+nav img[alt="burger-menu"] {
+  margin-right: 35px;
+  width: 35px;
+}
+
+.main-title {
+  height: 7vh;
+  margin: 0 3vw 2vh 3vw;
+  color: white;
+  grid-column: 4 / span 6;
+  grid-row: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-title img {
+  width: 100%;
+  min-width: 320px;
+}
+
+.icons {
+  grid-row: 4;
+  grid-column: 5 / span 4;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.icons img {
+  height: 7vh;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.icons {
+  grid-row: 4;
+}
+
+.content-1 {
+  grid-row: 5;
+}
+
+.content-1.col.left {
+  position: relative;
+  grid-column: 1 / span 3;
+}
+
+.content-1.col.left.paragraph-starter {
+  margin-top: 4.3em;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.content-1.col.left.paragraph-starter img {
+  height: 4em;
+  margin-right: 1em;
+}
+
+.content-1.col.middle {
+  grid-column: 4 / span 6;
+}
+
+.content-1.col.right {
+  grid-column: 11 / span 2;
+}
+
+.image.picture-1 {
+  grid-row: 6;
+}
+
+h2 {
+  grid-row: 7;
+  grid-column: 3 / span 5 !important;
+}
+
+.content-2 {
+  grid-row: 8;
+}
+
+.content-2.col.left {
+  grid-column: 1 / span 2;
+  width: 50px;
+}
+
+.content-2.col.middle {
+  grid-column: 3 / span 8;
+}
+
+.content-2.col.right {
+  grid-column: 11 / span 2;
+}
+
+.tile-row.row-1 {
+  grid-row: 9;
+}
+
+.tile-row.row-2 {
+  grid-row: 10;
+}
+
+.tile-row.row-3 {
+  grid-row: 11;
+}
+
+.tile-row.row-4 {
+  grid-row: 12;
+}
+
+.content-3 {
+  grid-row: 13;
+}
+
+.content-3.col.left {
+  grid-column: 1 / span 2;
+}
+
+.content-3.col.middle {
+  grid-column: 3 / span 8;
+}
+
+.content-3.col.right {
+  grid-column: 11 / span 2;
+}
+
+.image.picture-2 {
+  grid-row: 14;
+  padding-bottom: 2em;
+}
+
+.image-caption {
+  padding: 1rem 0 1rem 1rem;
+  color: #959595;
+}
+
+.text {
+  line-height: 2em;
+}
+
+.text p {
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+@media screen and (min-width: 1282px) {
+  .head {
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .head svg defs #grad1, .head svg defs #grad3, .head svg defs #grad4 {
+    display: none;
+  }
+  .head svg defs #grad2 {
+    display: initial;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .head svg defs #grad1, .head svg defs #grad2, .head svg defs #grad4 {
+    display: none;
+  }
+  .head svg defs #grad3 {
+    display: initial;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .head svg defs #grad1, .head svg defs #grad2, .head svg defs #grad3 {
+    display: none;
+  }
+  .head svg defs #grad4 {
+    display: initial;
+  }
+}
