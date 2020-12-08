@@ -1,0 +1,335 @@
+html {
+  scroll-snap-type: proximity;
+  overflow-y: scroll;
+  scroll-snap-points-y: repeat(450px);
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  position: relative;
+}
+
+section:nth-of-type(1) {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  position: relative;
+}
+
+section i {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  width: 100px;
+  transform: translateX(-50%);
+  transition: 0.5s;
+  animation: bounce 1s infinite alternate;
+}
+
+section i:hover {
+  color: #4cc9f0;
+  filter: drop-shadow(0px 0px 30px #4cc9f0);
+}
+
+.fa-chevron-down:hover {
+  filter: drop-shadow(5px 5px 30px #4cc9f0);
+  text-shadow: 0px 0px 20px rgba(255, 165, 0, 0.75);
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+div#open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  margin: 40px;
+  z-index: 9999;
+  background-color: #464242;
+  border-radius: 50%;
+  opacity: 0;
+}
+div#open svg rect {
+  fill: white;
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+}
+div#open svg rect.a {
+  transform: translate(10px, 12px);
+  transition: 0.4s;
+}
+body.clicked div#open svg rect.a {
+  transform: rotate(45deg) translate(20px, 7px);
+}
+div#open svg rect.b {
+  transform: translate(10px, 19px);
+}
+body.clicked div#open svg rect.b {
+  opacity: 0;
+}
+div#open svg rect.c {
+  transform: translate(10px, 26px);
+  transition: 0.4s;
+}
+body.clicked div#open svg rect.c {
+  transform: rotate(-45deg) translate(-7px, 20px);
+}
+
+nav#nav {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 30px;
+  left: -200px;
+  width: 150px;
+  height: 70vh;
+  z-index: 9998;
+  background-color: #5f5b5b;
+  color: whitesmoke;
+  transition: left 0.4s;
+}
+body.clicked nav#nav {
+  left: 0;
+  top: 30px;
+  opacity: 0.9;
+}
+nav#nav ul li {
+  list-style: none;
+  padding: 20px 0;
+}
+nav#nav ul a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding: 0.5rem 2rem;
+  color: #f2f2f2;
+}
+nav#nav ul a:hover {
+  background-color: #fedd7b;
+  color: black;
+}
+
+a {
+  color: whitesmoke;
+}
+
+#navbar {
+  background-color: #333;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  top: -100px;
+  /*  padding: 0.2rem; */
+  display: flex;
+  justify-content: space-around;
+  transition: top 0.4s;
+}
+#navbar a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding: 0.5rem 2rem;
+  color: #f2f2f2;
+}
+#navbar a:hover {
+  background-color: #fedd7b;
+  color: black;
+}
+
+#footer {
+  background-color: #333;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  /*  padding: 0.2rem; */
+  display: flex;
+  justify-content: space-around;
+  transition: bottom 0.4s;
+}
+#footer a {
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 0.5rem 2rem;
+  color: #fedd7b;
+}
+#footer a:hover {
+  background-color: #fedd7b;
+  color: black;
+}
+
+h1 {
+  margin-top: 0.7em;
+  font-size: 2.5em;
+  font-weight: 900;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+  padding: 1.5em 0;
+}
+
+.page section {
+  height: 100vh;
+}
+.page .title {
+  position: absolute;
+  top: 18%;
+  left: 18%;
+  transform: translate(-50%, -50%);
+  color: whitesmoke;
+  background-color: rgba(216, 186, 94, 0.8);
+  padding: 1rem;
+  border-radius: 1em;
+  margin-left: 1em;
+}
+.page section:nth-of-type(1) {
+  background-image: linear-gradient(to bottom right, white, 75%, #f00f0ff0), url("../img/hero.jpg");
+  background-size: cover;
+  background-blend-mode: saturation;
+  background-position: top;
+}
+.page section:nth-of-type(2) {
+  background-color: antiquewhite;
+  min-height: 850px;
+}
+.page section:nth-of-type(3) {
+  background-color: rgba(255, 99, 71, 0.1);
+  min-height: 1000px;
+}
+.page .introduction {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 15px;
+}
+.page .introduction p {
+  padding: 0 15px;
+}
+.page .ourhistory {
+  grid-column: 1;
+  grid-row: 1;
+}
+.page .gallery {
+  grid-column: 2;
+  grid-row: 1/span 2;
+  overflow: hidden;
+}
+.page .gallery img {
+  max-height: 80vh;
+  padding: 0 15px;
+}
+.page .sospecial {
+  grid-column: 1;
+  grid-row: 2;
+}
+.page .prices {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  gap: 15px;
+}
+.page .prices .small,
+.page .prices .medium,
+.page .prices .large {
+  text-align: center;
+}
+.page .pizzas {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+}
+.page .pizzas .pizza-item {
+  width: calc(50% - 5vw);
+  display: flex;
+  flex-flow: column wrap;
+  align-items: stretch;
+  margin: 0 auto;
+}
+.page .pizzas .pizza-item > * {
+  margin: 20px auto 0;
+  text-align: center;
+}
+.page .pizzas .pizza-item .pizza-name {
+  width: 80%;
+  border-radius: 50px 50px 0 0;
+  font-weight: bolder;
+  font-size: x-large;
+  padding-bottom: 5px;
+}
+.page .pizzas .pizza-item .pizza-desc {
+  margin: 0 10%;
+}
+@media only screen and (max-width: 660px) {
+  .page .title {
+    top: 50%;
+    left: 50%;
+  }
+  .page #navbar {
+    display: none;
+  }
+  .page div#open {
+    opacity: 1000;
+    visibility: visible;
+    display: block;
+    z-index: 9999999;
+  }
+  .page .gallery {
+    grid-row: initial;
+    grid-column: 1;
+  }
+  .page .prices {
+    flex-direction: column;
+  }
+  .page .pizzas {
+    flex-direction: column;
+  }
+  .page .pizzas .pizza-item {
+    width: 100%;
+  }
+  .page .introduction {
+    height: 200vh;
+  }
+  .page .menu {
+    height: 200vh;
+  }
+}
+@media only screen and (max-height: 740px) {
+  .page .menu {
+    height: 220vh;
+  }
+  .page .introduction {
+    height: 160vh;
+  }
+}
+@media only screen and (max-height: 810px) and (max-width: 660px) {
+  .page .menu {
+    height: 250vh;
+  }
+}

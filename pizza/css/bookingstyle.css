@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  height: 100vh;
+  width: 100vw;
+}
+
+#navbar {
+  background-color: #333;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  /*  padding: 0.2rem; */
+  display: flex;
+  justify-content: space-around;
+  transition: top 0.4s;
+}
+#navbar a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding: 0.5rem 2rem;
+  color: #f2f2f2;
+}
+#navbar a:hover {
+  background-color: #fedd7b;
+  color: black;
+}
+
+.book_page {
+  height: 110vh;
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Roboto", sans-serif;
+  background-image: url("../img/pizza_table.jpg");
+  background-size: cover;
+}
+.book_page .inputs {
+  margin-top: 7vh;
+  margin-left: 1vw;
+  height: 90vh;
+  width: 25vw;
+  min-width: 280px;
+  box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(233, 133, 65, 0.9);
+}
+.book_page .inputs form {
+  height: 90vh;
+  width: 25vw;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.book_page .inputs form #mail_error {
+  display: none;
+  font-size: small;
+}
+.book_page .inputs form #date {
+  display: flex;
+  flex-direction: row;
+}
+.book_page .inputs form #date section {
+  margin: 1rem;
+}
+.book_page .inputs form #date #day {
+  height: 1rem;
+  width: 2rem;
+  transform: translateY(1rem);
+}
+.book_page .inputs form #customer_number {
+  max-width: 3rem;
+}
+
+#submit {
+  height: 2rem;
+  width: 6rem;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  background-color: #f14121;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+#submit:hover {
+  background-color: #7a0605;
+}
+
+#picture {
+  height: 250px;
+  width: 250px;
+  margin-top: 2rem;
+  border: 2px solid black;
+}
+
+#date_head {
+  transform: translateY(1rem);
+}
+
+#under_picture {
+  color: black;
+  text-shadow: 1px 1px 0px #e7c3a1;
+}
+
+#spacer {
+  height: 0.5rem;
+}
+
+/* 
+media
+
+
+#maildiv {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	input{
+		margin-top: 2vh;
+	}
+}
+
+#date{
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 1rem;
+	section {
+		margin: 0.5rem ;
+	}
+	#year{
+		transform: translatex( 1rem);
+	}
+
+	#day{
+		height: 1rem;
+		width: 2rem;
+		margin-top: 0.5rem;
+		transform: translatex( 2rem);
+	}
+
+}
+*/
+@media only screen and (max-width: 660px) {
+  .book_page {
+    justify-content: center;
+  }
+}
