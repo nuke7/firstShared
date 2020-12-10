@@ -40,3 +40,18 @@ document.querySelector("#b").addEventListener("click", async () => {
   });
   document.querySelector(".results").innerHTML = resultHTML;
 });
+
+window.addEventListener("load", () => {
+  document.querySelector("body").insertAdjacentHTML(
+    "afterbegin",
+    `<div class="light title">
+	<h2>Movie Cards</h2>
+	<button class="btn">Turn the light on/off</button>
+	</div>`
+  );
+
+  let btn = document.querySelector(".btn");
+  btn.addEventListener("click", function () {
+    document.querySelector("body").classList.toggle("dark");
+  });
+});

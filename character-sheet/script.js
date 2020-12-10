@@ -12,7 +12,6 @@ window.onload = function () {
   const exportBtn = document.querySelector("#export");
   let validChar = true;
   let RegEx = /^[a-z0-9Á-ű]+$/i;
-  // let ValidRegEx = RegEx.test(name.value);
 
   let characters = [{}];
   function makeTextFile(text) {
@@ -159,9 +158,9 @@ window.onload = function () {
 
     for (let i = 0; i < characters.length - 1; i++) {
       console.log(`The ${i + 1}. character's name is ${characters[i].name}. 
-      ${characters[i].gender == "Male" ? "He" : "She"} is a(n) ${characters[i].race} ${
-        characters[i].gender
-      } - 
+      ${characters[i].gender == "Male" ? "He" : "She"} is a(n) ${
+        characters[i].race
+      } ${characters[i].gender} - 
       and is trained as a ${characters[i].class}.`);
     }
 
