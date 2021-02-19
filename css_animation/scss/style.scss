@@ -28,6 +28,12 @@ body {
     font-size: 48px;
   }
 
+  h3 {
+    position: absolute;
+    top: 5%;
+    left: 45%;
+  }
+
   &.clicked {
     h1 {
       animation-name: twist-slow;

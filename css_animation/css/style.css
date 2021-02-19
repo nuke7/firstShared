@@ -24,6 +24,12 @@ body p {
   transform: translate(-50%, -50%);
   font-size: 48px;
 }
+#root h3 {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+}
 #root.clicked h1 {
   animation-name: twist-slow;
   animation-duration: 3s;
