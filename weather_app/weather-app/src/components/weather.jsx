@@ -1,12 +1,10 @@
 import { Fragment } from "react";
-import styled from "styled-components";
-
-
+/* import styled from "styled-components"; */
 
 export const Weather = (props) => {
   const loading = typeof props.weather === "string";
 
-    console.log(props)
+  console.log(props);
   return (
     <Fragment>
       <h2>{loading ? props.weather : props.children}</h2>

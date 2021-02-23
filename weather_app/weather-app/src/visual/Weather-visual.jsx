@@ -1,4 +1,4 @@
-import { Fragment, useState, useEffect } from "react";
+import { Fragment, useState } from "react";
 import styled from "styled-components";
 // import { defaultResponse } from "../components/defaultResponse";
 import WeatherHeader from "./Weather-header";
@@ -111,12 +111,9 @@ export const WeatherVisual = (props) => {
   return (
     <WeatherContainer
       background={
-        props.picData && props.picData.id !== undefined
-          ? props.picData.src.original
-          : ""
+        props.picData && props.picData.id !== undefined ? props.picData.src.large2x : ""
       }
-      onClick={() => setOpen(!isOpen)}
-    >
+      onClick={() => setOpen(!isOpen)}>
       <MiddleDiv>
         <WeatherHeader cityName={loading ? props.weather : props.children} />
       </MiddleDiv>

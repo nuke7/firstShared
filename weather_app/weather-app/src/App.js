@@ -5,13 +5,14 @@ import CitySelect from "./components/cityselect";
 import { WeatherVisual } from "./visual/Weather-visual";
 import { defaultResponse } from "./components/defaultResponse";
 import { randomWithin } from "./utils/utils";
+import { cities } from "./data/cities";
 
 import "./App.css";
 
 const weatherApiURL =
   "https://api.openweathermap.org/data/2.5/weather?appid=5f4fb9096729f82bd320122aa11b3242&units=metric"; //&q={city name}
 
-const imageCount = 10;
+const imageCount = 15;
 const imageApiURL = `https://api.pexels.com/v1/search?per_page=${imageCount}`; //&query={city name}}
 const imageApiHeader = {
   method: "GET",
@@ -21,7 +22,7 @@ const imageApiHeader = {
   },
 };
 
-const citiesApiURL = "http://localhost:3000/data/cities.json";
+/* const citiesApiURL = cities; */
 
 function App() {
   const [cityName, setCityName] = useState("");
@@ -31,16 +32,13 @@ function App() {
   const [weatherApiQuery, setWeatherApiQuery] = useState("");
   const [imageApiQuery, setImageApiQuery] = useState("");
 
-  const cities = useData(citiesApiURL);
+  /*  const cities; */
 
   const weather = useData(weatherApiQuery ? weatherApiURL + weatherApiQuery : "");
 
   const geoIP = useData("http://www.geoplugin.net/json.gp");
 
-  const image = useData(
-    imageApiQuery ? imageApiURL + imageApiQuery : "",
-    imageApiHeader
-  );
+  const image = useData(imageApiQuery ? imageApiURL + imageApiQuery : "", imageApiHeader);
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -54,9 +52,7 @@ function App() {
       setWeatherApiQuery(`&q=${cityName}`);
       setImageApiQuery(`&query="${cityName.split(",,")[0]}"`);
     } else if (geolocation) {
-      setWeatherApiQuery(
-        `&lat=${geolocation.latitude}&lon=${geolocation.longitude}`
-      );
+      setWeatherApiQuery(`&lat=${geolocation.latitude}&lon=${geolocation.longitude}`);
     }
   }, [cityName, geolocation]);
 
@@ -68,13 +64,12 @@ function App() {
 
   const picData = () => {
     if (typeof image === "object") {
-    
-      if (image.page === undefined  || image.photos.length === 0) {
+      if (image.page === undefined || image.photos.length === 0) {
         const random = randomWithin([0, defaultResponse.photos.length - 1]);
         return defaultResponse.photos[
           Math.min(random, defaultResponse.photos.length - 1)
         ];
-      } else {        
+      } else {
         const random = randomWithin([0, image.photos.length - 1]);
         return image.photos[random];
       }
