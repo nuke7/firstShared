@@ -1,5 +1,3 @@
-# firstShared
-
 The _first_ shared repo created for collab
 
 [Fetch api vanilla js](https://nuke7.github.io/firstShared/fetch/index.html)
