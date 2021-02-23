@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,500;1,500&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.App {
+  min-height: 100vh;
+  background: url("https://i.giphy.com/media/2WjpfxAI5MvC9Nl8U7/giphy.webp")
+    no-repeat center center;
+  background-size: cover;
+  font-family: "Asap Condensed", sans-serif;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 5.75rem;
+  color: white;
+  text-align: center;
+  transform: translateY(20px);
+}
