@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.73a6f2db.chunk.css",
-    "main.js": "/static/js/main.d11307ae.chunk.js",
-    "main.js.map": "/static/js/main.d11307ae.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.0ac9c45b.js",
-    "runtime-main.js.map": "/static/js/runtime-main.0ac9c45b.js.map",
-    "static/js/2.3541cd1a.chunk.js": "/static/js/2.3541cd1a.chunk.js",
-    "static/js/2.3541cd1a.chunk.js.map": "/static/js/2.3541cd1a.chunk.js.map",
-    "static/js/3.0fc8a522.chunk.js": "/static/js/3.0fc8a522.chunk.js",
-    "static/js/3.0fc8a522.chunk.js.map": "/static/js/3.0fc8a522.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.73a6f2db.chunk.css.map": "/static/css/main.73a6f2db.chunk.css.map",
-    "static/js/2.3541cd1a.chunk.js.LICENSE.txt": "/static/js/2.3541cd1a.chunk.js.LICENSE.txt"
+    "main.css": "/firstShared/tvmaze/static/css/main.73a6f2db.chunk.css",
+    "main.js": "/firstShared/tvmaze/static/js/main.d11307ae.chunk.js",
+    "main.js.map": "/firstShared/tvmaze/static/js/main.d11307ae.chunk.js.map",
+    "runtime-main.js": "/firstShared/tvmaze/static/js/runtime-main.0ac9c45b.js",
+    "runtime-main.js.map": "/firstShared/tvmaze/static/js/runtime-main.0ac9c45b.js.map",
+    "static/js/2.3541cd1a.chunk.js": "/firstShared/tvmaze/static/js/2.3541cd1a.chunk.js",
+    "static/js/2.3541cd1a.chunk.js.map": "/firstShared/tvmaze/static/js/2.3541cd1a.chunk.js.map",
+    "static/js/3.0fc8a522.chunk.js": "/firstShared/tvmaze/static/js/3.0fc8a522.chunk.js",
+    "static/js/3.0fc8a522.chunk.js.map": "/firstShared/tvmaze/static/js/3.0fc8a522.chunk.js.map",
+    "index.html": "/firstShared/tvmaze/index.html",
+    "static/css/main.73a6f2db.chunk.css.map": "/firstShared/tvmaze/static/css/main.73a6f2db.chunk.css.map",
+    "static/js/2.3541cd1a.chunk.js.LICENSE.txt": "/firstShared/tvmaze/static/js/2.3541cd1a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0ac9c45b.js",
