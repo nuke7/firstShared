@@ -1,0 +1,13 @@
+.background-and-textcolor {
+  /* background-color: rgba(255, 255, 255, 0.3); */
+
+  /*   border: 2px solid white;
+  border-radius: 2px; */
+  font-size: 150%;
+  color: white;
+  text-shadow: 2px 2px 2px Black;
+}
+
+.zombiePic {
+  height: 9.5vh;
+}
