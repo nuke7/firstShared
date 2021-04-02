@@ -14,5 +14,7 @@ The _first_ shared repo created for collab
 
 [Mouse tracking with js](https://nuke7.github.io/firstShared/szem/)
 
+[Beer api frontend in react with context](https://nuke7.github.io/firstShared/beer-context/)
+
 This line is for testing commits.
 **test line**
