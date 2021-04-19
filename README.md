@@ -1,7 +1,5 @@
 The _first_ shared repo created for collab
 
-[Character generator](https://nuke7.github.io/firstShared/character-sheet/)
-
 [Fetch api vanilla js](https://nuke7.github.io/firstShared/fetch/index.html)
 
 [Fetch api React](https://nuke7.github.io/firstShared/tv-maze)
